@@ -1,0 +1,125 @@
+[
+    {
+        "id": "83c498d058e93933",
+        "type": "tab",
+        "label": "Flow 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "http-in-json",
+        "type": "http in",
+        "z": "83c498d058e93933",
+        "name": "Receive JSON POST",
+        "url": "/upload-json",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "661ba97d0e15b196",
+                "http-response"
+            ]
+        ]
+    },
+    {
+        "id": "http-response",
+        "type": "http response",
+        "z": "83c498d058e93933",
+        "name": "Send Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 420,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "22994a951f385860",
+        "type": "debug",
+        "z": "83c498d058e93933",
+        "name": "See IDs",
+        "active": true,
+        "tosidebar": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 780,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9618874c8a9e494c",
+        "type": "function",
+        "z": "83c498d058e93933",
+        "name": "Extract METER_IDs",
+        "func": "let root = msg.payload;\n\n// If wrapped in array, take first element\nif (Array.isArray(root)) {\n    root = root[0];\n}\n\nlet meters = root.meter || [];\nmsg.payload = meters.map(m => m.METER_ID);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "22994a951f385860"
+            ]
+        ]
+    },
+    {
+        "id": "661ba97d0e15b196",
+        "type": "json",
+        "z": "83c498d058e93933",
+        "name": "Parse JSON",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "9618874c8a9e494c",
+                "84f73af1d1179d3c"
+            ]
+        ]
+    },
+    {
+        "id": "84f73af1d1179d3c",
+        "type": "function",
+        "z": "83c498d058e93933",
+        "name": "Extract VAL",
+        "func": "let root = msg.payload;\n\n// If wrapped in array, take first element\nif (Array.isArray(root)) {\n    root = root[0];\n}\n\n\nmsg.payload = root.meter[1].data[1].entry[0].VAL;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 520,
+        "wires": [
+            [
+                "142aeaeabde2d017"
+            ]
+        ]
+    },
+    {
+        "id": "142aeaeabde2d017",
+        "type": "debug",
+        "z": "83c498d058e93933",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 520,
+        "wires": []
+    }
+]

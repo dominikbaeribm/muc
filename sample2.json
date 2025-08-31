@@ -1,0 +1,165 @@
+[
+    {
+        "MUC_ID": "6891d0805924",
+        "VERSION": "1",
+        "TIMESTAMP": 1756575095,
+        "meter": [
+            {
+                "METER_ID": "70330893",
+                "INTERFACE": "WMBus",
+                "MAN": "ZRI",
+                "VER": 0,
+                "MED": "Cold water",
+                "MED_ID": 22,
+                "USER": "Wasser",
+                "data": [
+                    {
+                        "DESCRIPTION": "Volume",
+                        "UNIT": "m^3",
+                        "SCALE": 0.001,
+                        "DIF": "04",
+                        "VIF": "13",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574977,
+                                "T": 1756512000,
+                                "VAL": "241356"
+                            }
+                        ]
+                    },
+                    {
+                        "DESCRIPTION": "Error flags (Device type specific)",
+                        "UNIT": "Bin",
+                        "SCALE": 1,
+                        "DIF": "02",
+                        "VIF": "FD 17",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574977,
+                                "T": 1756512000,
+                                "VAL": "32"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "METER_ID": "21041069",
+                "INTERFACE": "MBus",
+                "MAN": "INM",
+                "VER": 1,
+                "MED": "Electricity",
+                "MED_ID": 2,
+                "USER": "Mietwohnung",
+                "data": [
+                    {
+                        "DESCRIPTION": "Energy",
+                        "UNIT": "kWh",
+                        "SCALE": 0.001,
+                        "DIF": "84 10",
+                        "VIF": "03",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574102,
+                                "T": 0,
+                                "VAL": "5046038"
+                            }
+                        ]
+                    },
+                    {
+                        "DESCRIPTION": "Energy",
+                        "UNIT": "kWh",
+                        "SCALE": 0.001,
+                        "DIF": "84 20",
+                        "VIF": "03",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574102,
+                                "T": 0,
+                                "VAL": "5549203"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "METER_ID": "22011864",
+                "INTERFACE": "MBus",
+                "MAN": "INM",
+                "VER": 1,
+                "MED": "Electricity",
+                "MED_ID": 2,
+                "USER": "Einliegerwohnung",
+                "data": [
+                    {
+                        "DESCRIPTION": "Energy",
+                        "UNIT": "kWh",
+                        "SCALE": 0.001,
+                        "DIF": "84 10",
+                        "VIF": "03",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574103,
+                                "T": 0,
+                                "VAL": "1094003"
+                            }
+                        ]
+                    },
+                    {
+                        "DESCRIPTION": "Energy",
+                        "UNIT": "kWh",
+                        "SCALE": 0.001,
+                        "DIF": "84 20",
+                        "VIF": "03",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574103,
+                                "T": 0,
+                                "VAL": "1670508"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "METER_ID": "23021066",
+                "INTERFACE": "MBus",
+                "MAN": "INM",
+                "VER": 1,
+                "MED": "Electricity",
+                "MED_ID": 2,
+                "USER": "Allgemein",
+                "data": [
+                    {
+                        "DESCRIPTION": "Energy",
+                        "UNIT": "kWh",
+                        "SCALE": 0.001,
+                        "DIF": "84 10",
+                        "VIF": "03",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574105,
+                                "T": 0,
+                                "VAL": "1276670"
+                            }
+                        ]
+                    },
+                    {
+                        "DESCRIPTION": "Energy",
+                        "UNIT": "kWh",
+                        "SCALE": 0.001,
+                        "DIF": "84 20",
+                        "VIF": "03",
+                        "entry": [
+                            {
+                                "T_MUC": 1756574105,
+                                "T": 0,
+                                "VAL": "1915176"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
